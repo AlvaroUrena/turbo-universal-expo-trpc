@@ -1,21 +1,25 @@
 {
   "name": "turbo-universal-expo-trpc",
-  "private": true,
-  "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
   "devDependencies": {
-    "prettier": "^3.2.5",
+    "@biomejs/biome": "^1.9.2",
     "turbo": "^2.1.2",
     "typescript": "^5.4.5"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=18.18.2"
   },
   "packageManager": "bun@1.1.29",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "clean": "rm -rf node_modules",
+    "clean:workspaces": "turbo clean",
+    "dev": "turbo dev",
+    "format": "turbo format --continue --",
+    "format:fix": "turbo format --continue -- --write",
+    "lint": "turbo lint --continue --",
+    "lint:fix": "turbo lint --continue -- --apply"
+  },
   "workspaces": [
     "apps/*",
     "packages/*"
