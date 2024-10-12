@@ -7,7 +7,9 @@
     "ios": "expo start --ios",
     "start": "expo start",
     "lint": "biome lint ./src",
-    "format": "biome format ./src ",
+    "lint:fix": "biome lint ./src --write",
+    "format": "biome format ./src",
+    "format:fix": "biome format ./src --write",
     "web": "expo start --web",
     "dev": "expo start --web"
   },

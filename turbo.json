@@ -19,7 +19,24 @@
       "outputs": [".next/**", ".expo/**"]
     },
     "lint": {
-      "outputs": []
+      "dependsOn": [
+        "^topo"
+      ]
+    },
+    "format": {
+      "dependsOn": [
+        "^topo"
+      ]
+    },
+    "lint:fix": {
+      "dependsOn": [
+        "^topo"
+      ]
+    },
+    "format:fix": {
+      "dependsOn": [
+        "^topo"
+      ]
     },
     "clean": {
       "cache": false
